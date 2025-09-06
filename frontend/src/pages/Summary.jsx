@@ -13,7 +13,7 @@ const Summary = () => {
   useEffect(() => {
     const fetchInvoice = async () => {
       try {
-        const res = await axios.get(`http://localhost:4000/api/v1/invoice/${id}`);
+        const res = await axios.get(`https://invoiceapp-backend-ja3d.onrender.com/api/v1/invoice/${id}`);
         setInvoice(res.data.invoice);
       } catch (err) {
         console.error("Error fetching invoice:", err);
@@ -24,7 +24,7 @@ const Summary = () => {
 
   const generateSummary = async () => {
     try {
-      const res = await axios.post(`http://localhost:4000/api/v1/invoice/${id}/summary`);
+      const res = await axios.post(`https://invoiceapp-backend-ja3d.onrender.com/api/v1/invoice/${id}/summary`);
       setSummary(res.data.summary);
     } catch (err) {
       console.error("Error generating summary:", err);

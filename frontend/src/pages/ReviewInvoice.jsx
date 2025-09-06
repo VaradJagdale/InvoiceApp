@@ -13,7 +13,7 @@ const ReviewInvoice = () => {
   useEffect(() => {
     const fetchInvoice = async () => {
       try {
-        const res = await axios.get(`http://localhost:4000/api/v1/invoice/${id}`);
+        const res = await axios.get(`https://invoiceapp-backend-ja3d.onrender.com/api/v1/invoice/${id}`);
         setInvoice(res.data.invoice);
       } catch (err) {
         console.error("Error fetching invoice:", err);
@@ -26,7 +26,7 @@ const ReviewInvoice = () => {
 
   const handleSave = async (updatedData) => {
     try {
-      const res = await axios.put(`http://localhost:4000/api/v1/invoice/${id}`, updatedData);
+      const res = await axios.put(`https://invoiceapp-backend-ja3d.onrender.com/api/v1/invoice/${id}`, updatedData);
       alert("Invoice updated successfully!");
       navigate(`/summary/${id}`);
     } catch (err) {

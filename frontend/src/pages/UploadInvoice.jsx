@@ -24,7 +24,7 @@ function UploadInvoice() {
 
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:4000/api/v1/invoice/upload", {
+      const response = await fetch("https://invoiceapp-backend-ja3d.onrender.com/api/v1/invoice/upload", {
         method: "POST",
         body: formData,
       });
