@@ -15,10 +15,12 @@ const InvoiceDetails = ({ invoice, onSave }) => {
 
   return (
     <form className="invoice-details" onSubmit={handleSubmit}>
+      
       <div className="form-group">
-        <label>Invoice Number</label>
+        <label htmlFor="invoiceNumber">Invoice Number</label>
         <input
           type="text"
+          id="invoiceNumber"
           name="invoiceNumber"
           value={formData.invoiceNumber || ""}
           onChange={handleChange}
@@ -26,9 +28,10 @@ const InvoiceDetails = ({ invoice, onSave }) => {
       </div>
 
       <div className="form-group">
-        <label>Date</label>
+        <label htmlFor="date">Date</label>
         <input
           type="text"
+          id="date"
           name="date"
           value={formData.date || ""}
           onChange={handleChange}
@@ -36,9 +39,10 @@ const InvoiceDetails = ({ invoice, onSave }) => {
       </div>
 
       <div className="form-group">
-        <label>Customer Name</label>
+        <label htmlFor="customerName">Customer Name</label>
         <input
           type="text"
+          id="customerName"
           name="customerName"
           value={formData.customerName || ""}
           onChange={handleChange}
@@ -46,9 +50,10 @@ const InvoiceDetails = ({ invoice, onSave }) => {
       </div>
 
       <div className="form-group">
-        <label>Total Amount</label>
+        <label htmlFor="totalAmount">Total Amount</label>
         <input
           type="text"
+          id="totalAmount"
           name="totalAmount"
           value={formData.totalAmount || ""}
           onChange={handleChange}
@@ -58,9 +63,11 @@ const InvoiceDetails = ({ invoice, onSave }) => {
       <button type="submit" className="save-btn">
         Save & Continue
       </button>
+
     </form>
   );
 };
 
 export default InvoiceDetails;
+
 

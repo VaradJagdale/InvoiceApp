@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import InvoiceDetails from "../components/InvoiceDetails";
 import "../App.css";
+import { toast } from "react-toastify";
 
 const Summary = () => {
   const { id } = useParams();
@@ -17,6 +18,7 @@ const Summary = () => {
         setInvoice(res.data.invoice);
       } catch (err) {
         console.error("Error fetching invoice:", err);
+        toast.error("Failed to fetch invoice.");
       }
     };
     fetchInvoice();
@@ -26,8 +28,10 @@ const Summary = () => {
     try {
       const res = await axios.post(`https://invoiceapp-backend-ja3d.onrender.com/api/v1/invoice/${id}/summary`);
       setSummary(res.data.summary);
+      toast.success("Summary generated successfully!");
     } catch (err) {
       console.error("Error generating summary:", err);
+      toast.error("Failed to generate summary.");
     }
   };
 

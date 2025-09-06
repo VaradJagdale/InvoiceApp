@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import InvoiceForm from "../components/InvoiceForm";
 import "../App.css"
+import { toast } from "react-toastify";
 
 function UploadInvoice() {
   const [file, setFile] = useState(null);
@@ -15,7 +16,7 @@ function UploadInvoice() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!file) {
-      alert("Please select a file first.");
+      toast.error("Please select a file first.");
       return;
     }
 
@@ -32,14 +33,14 @@ function UploadInvoice() {
       const data = await response.json();
 
       if (data.success) {
-        alert("Invoice uploaded successfully!");
+        toast.success("Invoice uploaded successfully!");
         navigate(`/review/${data.invoice._id}`);
       } else {
-        alert("Upload failed, try again.");
+        toast.error("Upload failed, try again.");
       }
     } catch (error) {
       console.error("Error uploading invoice:", error);
-      alert("Error uploading invoice.");
+      toast.error("Error uploading invoice.");
     } finally {
       setLoading(false);
     }

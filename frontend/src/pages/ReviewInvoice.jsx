@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import InvoiceDetails from "../components/InvoiceDetails";
 import "../App.css";
+import { toast } from "react-toastify";
 
 const ReviewInvoice = () => {
   const { id } = useParams();
@@ -24,16 +25,16 @@ const ReviewInvoice = () => {
     fetchInvoice();
   }, [id]);
 
-  const handleSave = async (updatedData) => {
-    try {
-      const res = await axios.put(`https://invoiceapp-backend-ja3d.onrender.com/api/v1/invoice/${id}`, updatedData);
-      alert("Invoice updated successfully!");
-      navigate(`/summary/${id}`);
-    } catch (err) {
-      console.error("Error updating invoice:", err);
-      alert("Update failed!");
-    }
-  };
+ const handleSave = async (updatedData) => {
+  try {
+    const res = await axios.put(`https://invoiceapp-backend-ja3d.onrender.com/api/v1/invoice/${id}`, updatedData);
+    toast.success("Invoice updated successfully!");
+    navigate(`/summary/${id}`);
+  } catch (err) {
+    console.error("Error updating invoice:", err);
+    toast.error("Update failed!");
+  }
+};
 
   if (loading) return <p className="loading">Loading invoice...</p>;
 
