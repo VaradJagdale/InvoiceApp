@@ -1,4 +1,5 @@
 🧾 InvoiceApp – MERN Invoice Extraction & AI Summary
+
 ✅ Project Overview
 
 InvoiceApp is a full-stack MERN application that allows users to upload invoice files (PDF/JPG), automatically extract structured data using OCR + Cohere AI, review & correct extracted data, and generate a one-sentence professional AI summary.
