@@ -16,9 +16,9 @@ The Invoice App allows users to:
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** React.js, Tailwind CSS / CSS  
+- **Frontend:** React.js, CSS  
 - **Backend:** Node.js, Express.js, REST API  
-- **Database:** MongoDB / MySQL (specify your database)  
+- **Database:** MongoDB  
 - **Tools:** Git, GitHub, Postman, Netlify (frontend hosting), Render (backend hosting)
 
 ---
