@@ -1,29 +1,70 @@
-🧾 InvoiceApp – MERN Invoice Extraction & AI Summary
+# Invoice App
 
-✅ Project Overview
+A full-stack web application to create, upload, review, and manage invoices efficiently for businesses or freelancers.
 
-InvoiceApp is a full-stack MERN application that allows users to upload invoice files (PDF/JPG), automatically extract structured data using OCR + Cohere AI, review & correct extracted data, and generate a one-sentence professional AI summary.
+---
 
-⚡ Features
+## 🚀 Project Overview
 
-📤 Upload invoices in PDF/JPG format
+The Invoice App allows users to:
+- Upload invoice files (PDF or JPG)  
+- Review and edit uploaded invoices  
+- Generate summaries of invoices, including totals and payment status  
+- Track all invoices in a user-friendly dashboard
 
-🧱 Extract structured data (Invoice Number, Date, Customer Name, Total Amount)
+---
 
-✍️ Review and edit extracted fields
+## 🛠️ Tech Stack
 
-🤖 Generate a concise AI summary using Cohere
+- **Frontend:** React.js, Tailwind CSS / CSS  
+- **Backend:** Node.js, Express.js, REST API  
+- **Database:** MongoDB / MySQL (specify your database)  
+- **Tools:** Git, GitHub, Postman, Netlify (frontend hosting), Render (backend hosting)
 
-🗄️ Data persistence with MongoDB
+---
 
-🧱 Tech Stack
+## 🌐 Live Demo
 
-Frontend: React + Vite
+[https://invoiceapp-online.netlify.app]
 
-Backend: Node.js + Express
+---
 
-Database: MongoDB Atlas
+## ⚡ Features
 
-OCR API: OCR.Space API
+- Upload invoice files (PDF or JPG)  
+- Review, edit, or delete invoices  
+- Generate invoice summaries automatically  
+- User-friendly and responsive interface  
 
-AI Summarization: Cohere API
+---
+
+## 📋 Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/VaradJagdale/InvoiceApp.git
+
+## Navigate to backend and frontend folders and install dependencies:
+
+cd backend
+npm install
+
+cd ../frontend
+npm install
+
+## Set up your .env file in the backend/ folder with necessary environment variables, for example:
+
+DATABASE_URI=your_database_connection_string
+
+PORT=5000
+
+## Start the project:
+
+Backend:
+npm run start
+
+Frontend:
+npm run dev
+
+
+
