@@ -47,9 +47,11 @@ The Invoice App allows users to:
 ## Navigate to backend and frontend folders and install dependencies:
 
 cd backend
+
 npm install
 
 cd ../frontend
+
 npm install
 
 ## Set up your .env file in the backend/ folder with necessary environment variables, for example:
@@ -61,7 +63,7 @@ PORT=5000
 ## Start the project:
 
 Backend:
-npm run start
+npm run dev
 
 Frontend:
 npm run dev
